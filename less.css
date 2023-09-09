@@ -1,0 +1,219 @@
+.links_ul a {
+	padding: 10px 0;
+}
+
+/*topnav*/
+	.topnav_sublinks_bg,
+	.topnav_content,
+	.topnav_overlay,
+	.bg_container,
+	.topnav::after {
+		display: none;
+	}
+	.topnav {
+		background-color: hsl(var(--hsl-h2));
+		position: fixed;
+		top: 0;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		height: 50px;
+		padding: 0 10px;
+		color: #fff;
+	}
+	.topnav_mobile {
+		z-index: 2;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		color: #fff;
+	}
+	.mobile_logo {
+		margin: -5px;
+		width: 40px;
+		height: 40px;
+		background: url(images/osu-logo.svg);
+	}
+	.mobile_title {
+		padding: 0 10px;
+		min-width: 0;
+		font-size: 14px;
+	}
+
+	.mobile_menu {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		font-size: 16px;
+		clip: rect(auto, auto, 0, auto);
+		transition: clip .25s;
+	}
+	.mobile_menu.unclipped {
+		clip: rect(auto, auto, 100vh, auto);		
+	}
+	.menu_links {
+		background-color:  hsl(var(--hsl-b5));
+	}
+	.menu_links >  .menu_drop {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.menu_drop > a:hover {color: #fff;}
+	.menu_drop:hover .item_arrow img {filter: none;}
+	.menu_drop a {
+		align-items: center;
+		display: flex;
+		width: 100%;
+		align-items: center;
+		padding: 10px;
+		color: #aaa;
+		transition: color .2s;
+	}
+	.item_arrow {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		margin-right: 10px;
+	}
+	.tfed {
+		transform: rotate(-90deg);
+	}
+	.item_arrow img {
+		width: 100%;
+		height: 100%;
+		filter: brightness(50%);
+		transition: filter .2s;
+	}
+	/*	blackout*/
+	.blackout {
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, .3);
+	}
+
+	/*	tabs*/
+		.menu_tabs {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			height: 40px;
+			background-color: hsl(var(--hsl-d4));
+
+		}
+		.menu_user {
+			position: relative;
+			margin-right: auto;
+			display: flex;
+			height: 100%;
+			padding: 8px;
+		}
+			.menu_user:hover::after {
+				content: "";
+				display: block;
+				position: absolute;
+				height: 4px;
+				border-radius: 10000px;
+				background-color: hsl(var(--hsl-h1));
+				left: 8px;
+				right: 8px;
+				bottom: -2px;
+				z-index: 1;
+			}
+		.user_avatar {
+			display: flex;
+			height: 100%;
+			width: auto;
+			aspect-ratio: 1/1;
+			border-radius: 5px;
+			margin-right: 8px;
+		}
+		.user_name {
+			transition: color .2s;
+			color:  hsl(var(--hsl-l1));
+			display: flex;
+			align-items: center;
+		}
+		.menu_user:hover .user_name {
+			color: #fff;
+		}
+
+	/*	submenus*/
+		.menu_but {
+			display: flex;
+			position: relative;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			width: 40px;
+			height: 40px;
+			background: none;
+			border: 0;
+		}
+		.menu_but img {
+			width: 18px;
+			height: 18px;
+			filter: brightness(.5) hue-rotate(90deg) saturate(50%);
+		}
+		.menu_but:hover img {
+			filter: none;
+		}
+		.menu_but:hover::after {
+			content: "";
+			border-radius: 10000px;
+			position: absolute;
+			width: 100%;
+			height: 3px;
+			bottom: -1px;
+			background-color: hsl(var(--hsl-h1));
+		}
+		.mobile_submenu {
+			display: block;
+			flex-direction: column;
+		}
+		.mobile_submenu a {
+			width: 100%;
+			padding: 5px 10px 5px 60px;
+		}
+		.mobile_submenu a:hover {
+			background-color: hsl(var(--hsl-b3));
+		}
+
+	
+
+/*page-content*/
+	.page_content {
+		padding-top: 50px;
+		width: 100%;
+	}
+	.page_row {
+		padding: 0;
+	}
+	.page_links {
+		padding: 0 10px;
+	}
+	.page_title {
+		display: none;
+	}
+
+	.page_news_h3 {
+		margin: 0;
+		padding: 20px 0 10px 10px;
+		font-size: 20px;
+		display: flex;
+		align-items: flex-end;
+	}
+	.page_news_inside {
+		flex-direction: column;
+	}
+	.page_news_left {
+		width: 100%;
+	}
+	.page_news_sidebar {
+		width: 100%;
+	}
